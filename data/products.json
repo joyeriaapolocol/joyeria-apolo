@@ -1,0 +1,14 @@
+[
+  {
+    "nombre": "Anillo Apolo Oro 18k",
+    "precio": 350000,
+    "imagen": "img/anillo.jpg",
+    "material": "Oro 18k"
+  },
+  {
+    "nombre": "Cadena Clásica",
+    "precio": 420000,
+    "imagen": "img/cadena.jpg",
+    "material": "Oro 18k"
+  }
+]

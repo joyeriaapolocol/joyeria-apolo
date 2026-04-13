@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  background: #0A0A0A;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-hero {
+  width: 140px;
+}
+
+.hero h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  opacity: 0.6;
+}
+
+/* BOTONES */
+.btn {
+  border: 1px solid #C9A24A;
+  padding: 12px 28px;
+  border-radius: 40px;
+  text-decoration: none;
+  color: #C9A24A;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #C9A24A;
+  color: black;
+}
+
+/* CONFIANZA */
+.confianza {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* PRODUCTOS */
+.productos {
+  padding: 80px 20px;
+}
+
+#lista-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.producto {
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.producto:hover {
+  transform: translateY(-10px);
+}
+
+.producto img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.producto h3 {
+  font-family: 'Cinzel', serif;
+  padding: 10px;
+}
+
+.producto p {
+  padding: 0 10px;
+  opacity: 0.7;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #C9A24A;
+  padding: 15px;
+  border-radius: 50%;
+  color: black;
+  text-decoration: none;
+}
