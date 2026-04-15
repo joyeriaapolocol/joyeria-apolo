@@ -4,29 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apolo Joyería</title>
+
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- NETLIFY IDENTITY (IMPORTANTE) -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
 
 <header class="header">
-  <h1>Apolo Joyería</h1>
+  <img src="img/logo-horizontal.png" class="logo">
 </header>
 
 <section class="hero">
-  <h2>Joyería personalizada de alto nivel</h2>
+  <img src="img/logo-vertical.png" class="logo-hero">
+  <h2>Joyería personalizada</h2>
   <p>Diseños exclusivos en oro y plata</p>
-  <a href="#productos" class="btn">Ver catálogo</a>
+  <a href="#productos" class="btn">Explorar catálogo</a>
+</section>
+
+<section class="confianza">
+  <p>Hecho a mano</p>
+  <p>Materiales reales</p>
+  <p>Diseños únicos</p>
 </section>
 
 <section id="productos" class="productos">
-  <h2>Productos</h2>
+  <h2>Catálogo</h2>
   <div id="lista-productos"></div>
 </section>
 
 <section class="cotizar">
   <h2>Diseña tu joya</h2>
   <form name="cotizacion" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="cotizacion">
     <input type="text" name="nombre" placeholder="Nombre" required>
     <input type="text" name="whatsapp" placeholder="WhatsApp" required>
     <textarea name="descripcion" placeholder="Describe tu idea"></textarea>
@@ -34,10 +46,25 @@
   </form>
 </section>
 
-<a href="https://wa.me/57TU_NUMERO" class="whatsapp">💬</a>
+<a href="https://wa.me/57TU_NUMERO?text=Hola,%20quiero%20información%20sobre%20sus%20joyas" class="whatsapp">
+  💬
+</a>
 
 <script src="js/products.js"></script>
 <script src="js/app.js"></script>
+
+<!-- FIX LOGIN NETLIFY -->
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
