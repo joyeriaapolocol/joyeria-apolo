@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: joyeriaapolocol/joyeriaapolo
   branch: main
 
 media_folder: "img"
@@ -12,7 +13,18 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Nombre", name: "nombre", widget: "string" }
-      - { label: "Precio", name: "precio", widget: "number" }
-      - { label: "Material", name: "material", widget: "string" }
-      - { label: "Imagen", name: "imagen", widget: "image" }
+      - label: "Nombre"
+        name: "nombre"
+        widget: "string"
+
+      - label: "Precio"
+        name: "precio"
+        widget: "number"
+
+      - label: "Material"
+        name: "material"
+        widget: "string"
+
+      - label: "Imagen"
+        name: "imagen"
+        widget: "image"
