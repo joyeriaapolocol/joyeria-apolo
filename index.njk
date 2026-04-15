@@ -1,27 +1,52 @@
+---
+layout: null
+permalink: /
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Apolo Joyería</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
 <header class="header">
-  <img src="/img/logo-horizontal.png" class="logo">
+  <h1>Apolo Joyería</h1>
 </header>
 
 <section class="hero">
-  <img src="/img/logo-vertical.png" class="logo-hero">
-  <h1>Apolo Joyería</h1>
-  <p>Diseños exclusivos</p>
-  <a href="#productos" class="btn">Ver catálogo</a>
+  <h2>Elegancia en cada detalle</h2>
+  <p>Piezas únicas en oro</p>
 </section>
 
-<section id="productos" class="productos">
+<section class="productos">
   <h2>Catálogo</h2>
 
-  <div id="lista-productos">
+  <div class="grid">
+
     {% for producto in collections.productos %}
-    <div class="producto">
-      <img src="{{ producto.data.imagen }}">
+    <div class="card">
+      <img src="{{ producto.data.imagen }}" alt="">
+      
       <div class="info">
         <h3>{{ producto.data.nombre }}</h3>
         <p class="precio">${{ producto.data.precio }}</p>
         <p class="material">{{ producto.data.material }}</p>
+
+        <a class="btn"
+        href="https://wa.me/573505981641?text=Hola,%20quiero%20información%20sobre%20{{ producto.data.nombre }}">
+        Comprar
+        </a>
       </div>
     </div>
     {% endfor %}
+
   </div>
+
 </section>
+
+</body>
+</html>
