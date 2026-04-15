@@ -2,6 +2,8 @@ backend:
   name: github
   repo: joyeriaapolocol/joyeria-apolo
   branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
 media_folder: "img"
 public_folder: "/img"
@@ -15,18 +17,7 @@ collections:
     format: "json"
     extension: "json"
     fields:
-      - label: "Nombre"
-        name: "nombre"
-        widget: "string"
-
-      - label: "Precio"
-        name: "precio"
-        widget: "number"
-
-      - label: "Material"
-        name: "material"
-        widget: "string"
-
-      - label: "Imagen"
-        name: "imagen"
-        widget: "image"
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { label: "Precio", name: "precio", widget: "number" }
+      - { label: "Material", name: "material", widget: "string" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
