@@ -6,6 +6,7 @@
 </head>
 <body>
 
+<!-- 🔥 ESTE SCRIPT ES EL QUE ARREGLA TODO -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 <script>
@@ -17,6 +18,11 @@
         });
       }
     });
+
+    // 👇 ESTO CAPTURA EL TOKEN DEL EMAIL
+    window.netlifyIdentity.on("open", () => console.log("Widget abierto"));
+    window.netlifyIdentity.on("login", () => console.log("Logueado"));
+    window.netlifyIdentity.on("signup", () => console.log("Signup"));
   }
 </script>
 
