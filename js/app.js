@@ -2,25 +2,6 @@ function formatPrice(price) {
   return new Intl.NumberFormat('es-CO').format(price);
 }
 
-async function getProducts() {
-  const files = await fetch('/data/productos/');
-  const text = await files.text();
-
-  // solución simple temporal
-  const parser = new DOMParser();
-  const html = parser.parseFromString(text, 'text/html');
-
-  const links = [...html.querySelectorAll('a')]
-    .map(a => a.getAttribute('href'))
-    .filter(href => href.endsWith('.json'));
-
-  const productos = await Promise.all(
-    links.map(link => fetch('/data/productos/' + link).then(r => r.json()))
-  );
-
-  return productos;
-}
-
 async function renderProducts() {
   const productos = await getProducts();
   const contenedor = document.getElementById("lista-productos");
