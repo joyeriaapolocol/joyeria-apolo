@@ -7,13 +7,15 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* HEADER */
 .header {
   text-align: center;
   padding: 20px;
 }
 
-/* HERO */
+.logo {
+  width: 140px;
+}
+
 .hero {
   height: 100vh;
   display: flex;
@@ -24,27 +26,20 @@ body {
 }
 
 .logo-hero {
-  width: 140px;
+  width: 120px;
 }
 
 .hero h2 {
   font-family: 'Cinzel', serif;
-  font-size: 28px;
   letter-spacing: 2px;
 }
 
-.hero p {
-  opacity: 0.6;
-}
-
-/* BOTONES */
 .btn {
   border: 1px solid #C9A24A;
   padding: 12px 28px;
   border-radius: 40px;
-  text-decoration: none;
   color: #C9A24A;
-  transition: 0.3s;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -52,17 +47,13 @@ body {
   color: black;
 }
 
-/* CONFIANZA */
 .confianza {
   display: flex;
   justify-content: center;
   gap: 40px;
-  padding: 40px 20px;
-  font-size: 14px;
-  opacity: 0.7;
+  padding: 40px;
 }
 
-/* PRODUCTOS */
 .productos {
   padding: 80px 20px;
 }
@@ -77,11 +68,6 @@ body {
   background: rgba(255,255,255,0.03);
   border-radius: 16px;
   overflow: hidden;
-  transition: 0.4s;
-}
-
-.producto:hover {
-  transform: translateY(-10px);
 }
 
 .producto img {
@@ -90,17 +76,23 @@ body {
   object-fit: cover;
 }
 
-.producto h3 {
-  font-family: 'Cinzel', serif;
-  padding: 10px;
+.cotizar {
+  text-align: center;
+  padding: 60px;
 }
 
-.producto p {
-  padding: 0 10px;
-  opacity: 0.7;
+input, textarea {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  display: block;
 }
 
-/* WHATSAPP */
+button {
+  background: #C9A24A;
+  padding: 10px 20px;
+}
+
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -108,6 +100,4 @@ body {
   background: #C9A24A;
   padding: 15px;
   border-radius: 50%;
-  color: black;
-  text-decoration: none;
 }
