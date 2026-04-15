@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: joyeriaapolocol/joyeriaapolo
+  repo: joyeriaapolocol/joyeria-apolo
   branch: main
 
 media_folder: "img"
@@ -12,6 +12,8 @@ collections:
     folder: "data/productos"
     create: true
     slug: "{{slug}}"
+    format: "json"
+    extension: "json"
     fields:
       - label: "Nombre"
         name: "nombre"
