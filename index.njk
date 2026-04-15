@@ -1,0 +1,66 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apolo Joyería</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+<header class="header">
+  <img src="/img/logo-horizontal.png" class="logo">
+</header>
+
+<section class="hero">
+  <img src="/img/logo-vertical.png" class="logo-hero">
+  <h1>Apolo Joyería</h1>
+  <p>Diseños exclusivos en oro y plata</p>
+
+  <a href="#productos" class="btn">Ver catálogo</a>
+</section>
+
+<section class="confianza">
+  <div>✔ Hecho a mano</div>
+  <div>✔ Materiales reales</div>
+  <div>✔ Diseño personalizado</div>
+</section>
+
+<section id="productos" class="productos">
+  <h2>Catálogo</h2>
+
+  <div id="lista-productos">
+    {% for producto in collections.productos %}
+    <div class="producto">
+      <img src="{{ producto.data.imagen }}">
+      <div class="info">
+        <h3>{{ producto.data.nombre }}</h3>
+        <p class="precio">${{ producto.data.precio }}</p>
+        <p class="material">{{ producto.data.material }}</p>
+
+        <a href="https://wa.me/573505981641?text=Hola,%20quiero%20información%20sobre%20{{ producto.data.nombre }}%20de%20Apolo%20Joyería" class="btn">
+          Consultar
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cta">
+  <h2>¿Quieres una pieza única?</h2>
+  <p>Diseñamos joyas personalizadas a tu medida</p>
+</section>
+
+<a href="https://wa.me/573505981641?text=Hola,%20quiero%20información%20sobre%20sus%20joyas" class="whatsapp">
+  💬
+</a>
+
+</body>
+</html>
